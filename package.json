@@ -1,7 +1,7 @@
 {
 	"name": "n8n-nodes-klaviyo",
 	"version": "0.1.0",
-	"description": "",
+	"description": "n8n nodes for Klaviyo",
 	"keywords": [
 		"n8n-community-node-package"
 	],
@@ -12,8 +12,8 @@
 		"url": "https://github.com/0xtlt/n8n-nodes-klaviyo.git"
 	},
 	"author": {
-		"name": "",
-		"email": ""
+		"name": "0xtlt",
+		"email": "thomas@blackswan.paris"
 	},
 	"main": "index.js",
 	"scripts": {
