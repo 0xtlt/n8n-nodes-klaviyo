@@ -5,22 +5,16 @@ import {
 	INodeProperties,
 } from 'n8n-workflow';
 
-export class HttpBinApi implements ICredentialType {
-	name = 'httpbinApi';
-	displayName = 'HttpBin API';
-	documentationUrl = '<your-docs-url>';
+export class KlaviyoApi implements ICredentialType {
+	name = 'klaviyoApi';
+	displayName = 'Klaviyo API';
+	documentationUrl = 'https://developers.klaviyo.com/en/docs/retrieve_api_credentials';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'Token',
 			name: 'token',
 			type: 'string',
 			default: '',
-		},
-		{
-			displayName: 'Domain',
-			name: 'domain',
-			type: 'string',
-			default: 'https://httpbin.org',
 		},
 	];
 
@@ -32,7 +26,9 @@ export class HttpBinApi implements ICredentialType {
 		type: 'generic',
 		properties: {
 			headers: {
-				Authorization: '={{"Bearer " + $credentials.token}}',
+				Authorization: '={{"Klaviyo-API-Key " + $credentials.token}}',
+				Accept: 'application/json',
+				revision: '2023-01-24',
 			},
 		},
 	};
@@ -40,8 +36,8 @@ export class HttpBinApi implements ICredentialType {
 	// The block below tells how this credential can be tested
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: '={{$credentials?.domain}}',
-			url: '/bearer',
+			baseURL: 'https://a.klaviyo.com/api',
+			url: '/flows',
 		},
 	};
 }
