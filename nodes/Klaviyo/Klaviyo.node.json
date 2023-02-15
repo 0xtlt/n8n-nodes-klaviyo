@@ -1,8 +1,8 @@
 {
 	"node": "n8n-nodes-base.klaviyo",
-	"nodeVersion": "1.0",
+	"nodeVersion": "1.1",
 	"codexVersion": "1.0",
-	"categories": ["Development", "Developer Tools"],
+	"categories": ["Development", "Marketing & Content"],
 	"resources": {
 		"credentialDocumentation": [
 			{
