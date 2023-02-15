@@ -22,6 +22,7 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 - Get all templates
 - Get flow
 - Get all flows
+- Create event
 - More to come...
 
 ## Credentials
